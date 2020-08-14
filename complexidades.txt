@@ -1,0 +1,84 @@
+########################################
+#### Complexities for each question ####
+########################################
+
+####################################
+## Question 1 - ReplaceCharacters ##
+####################################
+
+'n' is the true string length
+'m' is the total iterations to reach the final length of the string after to insert the characters '3' and '2' using the counter "limit" as auxiliary
+
+-> Time complexity: O(n * (log m))
+-> Space complexity: O(n + (log m))
+
+##############################################
+## Question 2 - CheckIfTheLettersAreJumbled ##
+##############################################
+
+'n' is the "defaultStr" length
+
+-> Time complexity: O(n)
+-> Space complexity: O(n)
+
+############################
+## Question 3 - CheckTypo ##
+############################
+
+'n' is the length of "smallerStr" when the lengths of the two strings are different. Otherwise, the length of any one of them will be used.
+
+-> Time complexity: O(n)
+-> Space complexity: O(n)
+
+##########################################
+## Question 5 - RemoveDupsOnEmailThread ##
+##########################################
+
+Two solutions were provided.
+
+# The first solution uses HashMap - function "removeDupsUsingHashMap" #
+
+'n' is the length of provided list
+'m' is the complexity for "containsKey" method of the HashMap
+The complexity for "add" method of the SinglyLinkedList is constant
+
+* Considering the data structures used for this solution:
+
+'a' is the space of HashMap
+'b' is the space of SinglyLinkedList. Two of them were used.
+
+-> Time complexity: O(n * m)
+-> Space complexity: O(a + b + b)
+
+# The second solution uses just nodes from the SinglyLinkedList provided - function "removeDupsUsingPointers" #
+
+'n' is the length of SinglyLinkedList provided
+'m' is the complexity for the iteration made by the "runner" pointer. It can iterate through each node in the list, 
+ignore half of them or all but one. Therefore, it is equal to log (n).
+
+-> Time complexity: O(n * log(n))
+-> Space complexity: O(n + log(n))
+
+##############################################
+## Question 7 - CheckLinkedListIntersection ##
+##############################################
+
+Two solutions were provided.
+
+# The first solution assumes that one list could have more elements after the intersection - function "iterateThrough" #
+
+'n' is the length of the longer list
+'m' is the length of the shorter list
+
+-> Time complexity: O(n * m)
+-> Space complexity: O(n + m)
+
+# The second solution assumes that the lists have a "perfect" intersection - function "iteratePerfectIntersection" #
+
+'n' is the length of the longer list
+'m' is the length of the shorter list
+
+-> Time complexity: O(n)
+-> Space complexity: O(n + m)
+
+
